@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+    <div class="col-md-5 p-lg-5 mx-auto my-5">
+        <h1 class="display-4 fw-normal">Your memories to life.</h1>
+        <p class="lead fw-normal">Bring your black and white photos to life with our automatic advanced deep learning algorithm.</p>
+        <a class="btn btn-outline-secondary" href="#">Try It Out</a>
+    </div>
+    <div class="product-device shadow-sm d-none d-md-block"></div>
+    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+</div>
+
+<div class="bg-light me-md-3 py-5 px-3 text-center d-flex flex-column flex-md-row justify-content-center">
+    <div id="uploadPage" class="col-4">
+        <h2 class="display-5 pb-2">Colourise Your Photo</h2>
+        <div class="formError"></div>
+        <div class="d-grid gap-2 mx-auto mt-3">
+            <input id="upload" name="upload" class="form-control" type="file">
+        </div>
+        <div class="fs-3 my-2">- OR -</div>
+        <div class="input-group">
+            <input id="url" name="url" type="text" class="form-control" placeholder="Image URL" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <button class="btn btn-outline-secondary" id="urlSubmit">Colourise</button>
+        </div>
+    </div>
+    <div id="uploading" class="col-4" style="display: none;">
+        <h2 class="display-5 pb-2">Colourising...</h2>
+        <div class="spinner-border" role="status">
+          <span class="visually-hidden">Colourising...</span>
+        </div>
+    </div>
+    <div id="result" class="col-4" style="display: none;">
+        <h2 class="display-5 pb-2">Success!</h2>
+        <img id="resultImage" src=""></img>
+        <div class="mt-2">
+            <button class="btn btn-secondary" type="button" onclick="start()">Start again</button>
+            <a id="download" class="btn btn-primary">Download</a>
+        </div>
+    </div>
+
+
+</div>
+{% endblock %}
