@@ -7,7 +7,7 @@ import urllib.request
 
 __DIR__ = os.path.dirname(__file__)
 
-main = Flask(__name__)
+app = Flask(__name__)
 
 
 # Create directories
@@ -108,4 +108,4 @@ def upload_image():
 
 
 if __name__ == "__main__":
-    main.run(debug=False)
+    app.run(debug=False)
