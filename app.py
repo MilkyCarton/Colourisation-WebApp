@@ -105,7 +105,3 @@ def upload_image():
 
         error = "Must be a POST request"
         return {"error": error}
-
-
-if __name__ == "__main__":
-    app.run(debug=False)
