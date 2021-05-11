@@ -18,7 +18,7 @@ loaded_model = model_from_json(loaded_model_json)
 loaded_model.load_weights(os.path.join(__DIR__, "model.h5"))
 
 def conversion(filename):
-    colorize = []
+    colourise = []
     print('Output of the Model')
     image = img_to_array(load_img(os.path.join(__DIR__, "static/img/uploads/" + filename)))
     colorize.append(resize(image, (256, 256), anti_aliasing=True))
